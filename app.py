@@ -163,7 +163,7 @@ class OpenCVVideoProcessor(VideoProcessorBase):
         return img_org    
     def recv(self, frame: av.VideoFrame) -> av.VideoFrame:
         img = frame.to_ndarray(format="bgr24")
-        img = self.predict(img)
+        #img = self.predict(img)
         #self.result_queue = queue.Queue()
         return av.VideoFrame.from_ndarray(img, format="bgr24")
 
